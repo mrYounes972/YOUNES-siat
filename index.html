@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>یونس | قدرت هخامنشی با ذهن خوارزمی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'VazirBold';
+      src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Bold.woff2') format('woff2');
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'VazirBold', sans-serif;
+      background: #000;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background: radial-gradient(circle at center, #001f1f, #000000);
+      animation: pulse 10s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+      100% { opacity: 0.3; }
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #ffd700;
+      text-shadow: 0 0 15px #00ffcc;
+      margin-bottom: 20px;
+      animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #00ffcc;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      from { border-color: transparent }
+      to { border-color: #00ffcc }
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 30px;
+      animation: fadeInText 2s ease-in-out;
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .svg-icon {
+      width: 120px;
+      margin: 30px auto;
+      animation: rotate 10s linear infinite;
+      filter: drop-shadow(0 0 10px #ffd700);
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .btn {
+      background: linear-gradient(45deg, #00ffcc, #0066ff);
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00ffcc;
+      transition: 0.3s;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 20px #00ffcc; }
+      to { box-shadow: 0 0 40px #00ffcc; transform: scale(1.05); }
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 50px #00ffcc;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 16px;
+      color: #aaa;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      p { font-size: 1em; }
+      .btn { font-size: 16px; padding: 12px 24px; }
+      .svg-icon { width: 80px; }
+    }
+  </style>
+</head>
+<body onload="playSound()">
+  <div class="background"></div>
+  <div class="overlay">
+    <h1>هخامنشی با ذهن خوارزمی</h1>
+    <p>ترکیب قدرت با منطق، رمز با ریاضیات، و تاریخ با آینده</p>
+
+    <!-- نماد تخت جمشید به سبک SVG -->
+    <svg class="svg-icon" viewBox="0 0 64 64" fill="#ffd700" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 2L42 22H22L32 2Z" />
+      <rect x="28" y="22" width="8" height="30" />
+      <rect x="20" y="52" width="24" height="6" rx="2" />
+    </svg>
+
+    <button class="btn" onclick="window.location.href='https://t.me/MrYounes01'">ورود به چت تلگرام</button>
+    <div class="footer">قدرت گرفته از یونس</div>
+  </div>
+
+  <audio id="entrySound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_9a3b0b6c2f.mp3?filename=cyberpunk-intro-110397.mp3" preload="auto"></audio>
+  <script>
+    function playSound() {
+      document.getElementById("entrySound").play();
+    }
+  </script>
+</body>
+  </html>
